@@ -1,0 +1,9 @@
+@import model.Job
+
+@(job: Job)
+
+Job id is @job.id and job status is @job.status and the content is
+
+<ul>
+@job.data.map { e => <li>@e</li> }
+</ul>
