@@ -58,6 +58,8 @@ bin/
 /project/target
 /target
 tmp/
+/app-2.10
+/test-2.10
 test-result
 server.pid
 *.eml

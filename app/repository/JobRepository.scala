@@ -2,7 +2,7 @@ package repository
 
 import javax.inject.{Singleton, Inject}
 
-import model.{JobStatus, Job}
+import model.Job
 import play.api.inject.ApplicationLifecycle
 
 /**
@@ -13,6 +13,5 @@ sealed trait JobRepository {
 }
 
 class JobRepositoryImpl @Inject()(lifecycle: ApplicationLifecycle) extends JobRepository {
-  def getJobById(jobId: Int) =
-    Job(jobId, JobStatus.OK, Seq("The", "status", "is", "Okay"))
+  def getJobById(jobId: Int) = Job(jobId, "Alibaba", "Okay")
 }

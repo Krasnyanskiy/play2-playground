@@ -1,9 +1,20 @@
-@import model.Job
+@(job: model.Job)
+<!DOCTYPE html>
 
-@(job: Job)
-
-Job id is @job.id and job status is @job.status and the content is
-
-<ul>
-@job.data.map { e => <li>@e</li> }
-</ul>
+<html>
+    <head>
+        <title>Simple App</title>
+        <link rel="stylesheet"    href='@routes.Assets.at("stylesheets/main.css")'>
+        <link rel="shortcut icon" href='@routes.Assets.at("images/favicon.ico")'>
+        <script type='text/javascript' src='@routes.WebJarAssets.at(WebJarAssets.locate("jquery.min.js"))'></script>
+        <script type='text/javascript' src='@routes.WebJarAssets.at(WebJarAssets.locate("underscore-min.js"))'></script>
+        <script type='text/javascript' src="@routes.Assets.at("javascripts/main.js")"></script>
+    </head>
+    <body>
+        <div id="a5">Abc</div>
+        Job id is @job.id and job status is @job.status and the content is
+        <ul>
+        @job.data.map { e => <li>@e</li> }
+        </ul>
+    </body>
+</html>
