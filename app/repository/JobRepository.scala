@@ -9,9 +9,14 @@ import play.api.inject.ApplicationLifecycle
   * @author Alexander Krasniansky
   */
 sealed trait JobRepository {
-  def getJobById(jobId: Int): Job
+  def getJobById(id: Int): Job
 }
 
-class JobRepositoryImpl @Inject()(lifecycle: ApplicationLifecycle) extends JobRepository {
-  def getJobById(jobId: Int) = Job(jobId, "Alibaba", "Okay")
+//
+// fixme:
+//        remove 'lifecycle' or use it
+//
+class JobRepositoryImpl @Inject()(lifecycle: ApplicationLifecycle)
+  extends JobRepository {
+  def getJobById(id: Int) = Job(id, "Alibaba", "Okay")
 }

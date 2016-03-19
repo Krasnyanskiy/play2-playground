@@ -1,10 +1,9 @@
-@(job: model.Job)
+@(result: Seq[String])
 <!DOCTYPE html>
 
 <html>
     <head>
         <title>Simple App</title>
-        @*<link type="text/css" rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700">*@
         <link rel="stylesheet" href='@routes.WebJarAssets.at(WebJarAssets.locate("bootstrap.min.css"))'>
         <link rel="stylesheet" href='@routes.Assets.at("stylesheets/main.css")'>
         <link rel="shortcut icon" href='@routes.Assets.at("images/favicon.ico")'>
@@ -14,17 +13,6 @@
         <script type='text/javascript' src="@routes.Assets.at("javascripts/main.js")"></script>
     </head>
     <body>
-
-        <ul class="nav nav-tabs">
-            <li role="presentation" class="active"><a href="#">Home</a></li>
-            <li role="presentation"><a href="#">Profile</a></li>
-            <li role="presentation"><a href="#">Messages</a></li>
-        </ul>
-
-        <div id="a5">Abc</div>
-        Job id is @job.id and job status is @job.status and the content is
-        <ul>
-        @job.data.map { e => <li>@e</li> }
-        </ul>
+        Translation: @result
     </body>
 </html>

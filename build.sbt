@@ -12,7 +12,9 @@ libraryDependencies ++= Seq(
   //
   "junit" % "junit" % "4.11" excludeAll ExclusionRule(organization = "junit"),
   "org.slf4j" % "slf4j-nop" % "1.6.4",
-  //
+  "com.google.apis" % "google-api-services-translate" % "v2-rev44-1.21.0",
+  ws, // RestClient
+//
   // db
   //
   "com.h2database" % "h2" % "1.3.166",
