@@ -37,7 +37,7 @@ class YandexTranslateRepository extends TranslateRepository {
     //
     val url =
       s"https://translate.yandex.net/api/v1.5/tr.json/translate?" +
-        s"key=${prop("yandex.translate.api.key")}&" +
+        s"key=${prop("yandex.translate.key")}&" +
         s"format=${prop("yandex.translate.format")}&" +
         s"lang=${prop("yandex.translate.destLang")}&" +
         s"text=$searchPhrase"
